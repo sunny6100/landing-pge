@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Welcome to My Website</h1>
+      <p>Your one-stop destination for amazing content.</p>
+      <a href="#services" class="btn">Explore More</a>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We are dedicated to providing the best services to our clients. Our team of experts ensures top-notch quality and satisfaction.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-box">
+        <h3>Web Design</h3>
+        <p>Create stunning websites that are responsive and user-friendly.</p>
+      </div>
+      <div class="service-box">
+        <h3>Development</h3>
+        <p>Robust and scalable solutions tailored to your business needs.</p>
+      </div>
+      <div class="service-box">
+        <h3>SEO</h3>
+        <p>Optimize your website for better search engine rankings.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 My Website. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+#css code
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  text-decoration: none;
+  color: white;
+  background: #ff5733;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Navbar */
+.navbar {
+  background: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #ff5733;
+}
+
+/* About Section */
+.about {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.service-box {
+  background: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  width: calc(33% - 20px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+  margin-bottom: 15px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+}
