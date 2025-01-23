@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1>ashish sain</h1>
+      <p>Web Developer | Designer | Creator</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <img src="profile.jpg" alt="ashsish sain" class="profile-pic">
+      <h2>About Me</h2>
+      <p>Hello! I'm aashish, a passionate web developer with a knack for creating user-friendly and visually appealing websites. I specialize in front-end development and have experience with HTML, CSS, and JavaScript.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+        <li>UI/UX Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Portfolio Website</h3>
+        <p>A modern and responsive personal portfolio website.</p>
+      </div>
+      <div class="project">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>E-commerce Site</h3>
+        <p>An online store built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume">
+    <div class="container">
+      <h2>Resume</h2>
+      <a href="resume.pdf" download>Download My Resume</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: aashsih.sian@example.com</p>
+      <p>Phone: 9636444963</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 ashish sain. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+#css code
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2, h3, p {
+  margin: 10px 0;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.about .profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Skills Section */
+.skills {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  display: inline-block;
+  background: #4facfe;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Projects Section */
+.projects {
+  background: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.projects .project {
+  display: inline-block;
+  margin: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+.projects img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.projects h3 {
+  margin: 10px 0 5px;
+}
+
+.projects p {
+  font-size: 0.9rem;
+}
+
+/* Resume Section */
+.resume {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.resume a {
+  text-decoration: none;
+  color: white;
+  background: #00f2fe;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+}
