@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button class="btn" onclick="clearDisplay()">C</button>
+      <button class="btn" onclick="deleteLast()">DEL</button>
+      <button class="btn" onclick="appendOperator('/')">/</button>
+      <button class="btn" onclick="appendOperator('*')">*</button>
+
+      <button class="btn" onclick="appendNumber('7')">7</button>
+      <button class="btn" onclick="appendNumber('8')">8</button>
+      <button class="btn" onclick="appendNumber('9')">9</button>
+      <button class="btn" onclick="appendOperator('-')">-</button>
+
+      <button class="btn" onclick="appendNumber('4')">4</button>
+      <button class="btn" onclick="appendNumber('5')">5</button>
+      <button class="btn" onclick="appendNumber('6')">6</button>
+      <button class="btn" onclick="appendOperator('+')">+</button>
+
+      <button class="btn" onclick="appendNumber('1')">1</button>
+      <button class="btn" onclick="appendNumber('2')">2</button>
+      <button class="btn" onclick="appendNumber('3')">3</button>
+      <button class="btn equal-btn" onclick="calculateResult()">=</button>
+
+      <button class="btn zero-btn" onclick="appendNumber('0')">0</button>
+      <button class="btn" onclick="appendNumber('.')">.</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+#css code
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+
+.calculator {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Display Screen */
+.display {
+  background: #333;
+  color: white;
+  font-size: 2rem;
+  text-align: right;
+  padding: 20px;
+  height: 80px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #ccc;
+}
+
+.btn {
+  background: #f1f1f1;
+  border: none;
+  font-size: 1.2rem;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+.zero-btn {
+  grid-column: span 2;
+}
+
+.equal-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.equal-btn:hover {
+  background: #45a049;
+}
+#js code
+const display = document.getElementById('display');
+
+// Append numbers to the display
+function appendNumber(number) {
+  if (display.textContent === '0') {
+    display.textContent = number;
+  } else {
+    display.textContent += number;
+  }
+}
+
+// Append operators to the display
+function appendOperator(operator) {
+  const lastChar = display.textContent.slice(-1);
+  if (!['+', '-', '*', '/'].includes(lastChar)) {
+    display.textContent += operator;
+  }
+}
+
+// Clear the display
+function clearDisplay() {
+  display.textContent = '0';
+}
+
+// Delete the last character
+function deleteLast() {
+  display.textContent = display.textContent.slice(0, -1) || '0';
+}
+
+// Calculate the result
+function calculateResult() {
+  try {
+    display.textContent = eval(display.textContent) || '0'; // Use eval to calculate
+  } catch {
+    display.textContent = 'Error';
+  }
+}
